@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Croissant",
+    "ingredients": ["flour", "yeast", "milk", "sugar", "butter", "salt"],
+    "instructions": "Mix dough, fold with butter layers, proof, shape, bake at 375°F for 20 minutes."
+  },
+  {
+    "name": "Cinnamon Roll",
+    "ingredients": ["flour", "yeast", "milk", "sugar", "butter", "cinnamon", "brown sugar"],
+    "instructions": "Prepare dough, spread cinnamon filling, roll up, slice, bake at 350°F for 25 minutes."
+  },
+  {
+    "name": "Apple Turnover",
+    "ingredients": ["puff pastry", "apples", "sugar", "cinnamon", "butter"],
+    "instructions": "Fill pastry squares with apple mixture, fold, seal, bake at 400°F for 18 minutes."
+  },
+  {
+    "name": "Eclair",
+    "ingredients": ["flour", "butter", "eggs", "water", "chocolate", "cream"],
+    "instructions": "Make choux pastry, pipe shapes, bake, fill with cream, glaze with chocolate."
+  },
+  {
+    "name": "Strudel",
+    "ingredients": ["flour", "butter", "apples", "sugar", "cinnamon", "raisins"],
+    "instructions": "Roll thin dough, fill with apple mixture, roll up, bake at 375°F for 40 minutes."
+  },
+  {
+    "name": "Chocolate Danish",
+    "ingredients": ["puff pastry", "chocolate", "egg wash"],
+    "instructions": "Wrap chocolate in pastry, brush with egg wash, bake at 375°F for 15 minutes."
+  },
+  {
+    "name": "Lemon Tart",
+    "ingredients": ["flour", "butter", "sugar", "eggs", "lemon juice"],
+    "instructions": "Make tart shell, fill with lemon curd, bake at 325°F for 20 minutes."
+  },
+  {
+    "name": "Almond Croissant",
+    "ingredients": ["croissants", "almond cream", "sliced almonds", "powdered sugar"],
+    "instructions": "Fill croissants with almond cream, top with almonds, bake at 350°F for 15 minutes."
+  },
+  {
+    "name": "Baklava",
+    "ingredients": ["phyllo dough", "walnuts", "pistachios", "honey", "butter"],
+    "instructions": "Layer phyllo with nuts and butter, bake, pour honey syrup over after baking."
+  },
+  {
+    "name": "Profiteroles",
+    "ingredients": ["flour", "butter", "eggs", "cream", "chocolate"],
+    "instructions": "Make choux pastry, pipe and bake small balls, fill with cream, drizzle with chocolate."
+  }
+]
