@@ -16,51 +16,58 @@ assert(contents, err)
 local recipes, pos, decode_err = json.decode(contents, 1, nil)
 assert(recipes, "Error parsing JSON:" .. (decode_err or "Unknown Er"))
 
-for i, recipe in ipairs(recipes) do
-    print(i .. ". " .. recipe.name)
-end
+while true do
+    for i, recipe in ipairs(recipes) do
+        print(i .. ". " .. recipe.name)
+    end
 
-print("\n Please select a number.")
+    print("\n Please select a number.")
 
-local choice = io.read()
+    local choice = io.read()
 
-choice = tonumber(choice)
+    choice = tonumber(choice)
 
-local function join_list(list, separator)
-    local str = ""
-    for i, item in ipairs(list) do
-        str = str .. item
-        if i < #list then
-            str = str .. separator
+    local function join_list(list, separator)
+        local str = ""
+        for i, item in ipairs(list) do
+            str = str .. item
+            if i < #list then
+                str = str .. separator
+            end
         end
+        return str
     end
-    return str
-end
 
-if choice and recipes[choice] then
-    local selected = recipes[choice]
-    print("You have selected: " .. selected.name)
-    local ingredients = selected.ingredients
-    if type(ingredients) == 'table' then
-        print("Ingredients: " .. join_list(ingredients, ', '))
-    else
-        print("Ingredients: " .. (selected.ingredients or "N/A"))
-    end
-    print("\nWould you like to see instructions? (y/n)")
-    local see_instructions = io.read()
-
-    if see_instructions:lower() == "y" then
-        if selected.instructions then
-            print("\nInstructions: \n" .. selected.instructions)
+    if choice and recipes[choice] then
+        local selected = recipes[choice]
+        print("You have selected: " .. selected.name)
+        local ingredients = selected.ingredients
+        if type(ingredients) == 'table' then
+            print("Ingredients: " .. join_list(ingredients, ', '))
         else
-            print("\nInstructions Not Available")
+            print("Ingredients: " .. (selected.ingredients or "N/A"))
+        end
+        print("\nWould you like to see instructions? (y/n)")
+        local see_instructions = io.read()
+
+        if see_instructions:lower() == "y" then
+            if selected.instructions then
+                print("\nInstructions: \n" .. selected.instructions)
+            else
+                print("\nInstructions Not Available")
+            end
+        else
+            print("\nOk. No instructions shown.")
         end
     else
-        print("\nOk. No instructions shown.")
+        print("Invalid Selection.")
     end
-else
-    print("Invalid Selection.")
+
+    print("\nPress Enter to see list again or type 'X' to exit.")
+    local input = io.read()
+    if input:lower() == "x" then
+        break
+    end
 end
 
-print("\nPress Enter or X to exit...")
-local _ = io.read()
+print("Goodbye!")
